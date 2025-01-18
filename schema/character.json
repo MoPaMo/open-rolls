@@ -1,1 +1,26 @@
-{}
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DnDCharacter",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The character's name."
+    },
+    "race": {
+      "type": "string",
+      "description": "The character's race (e.g., Human, Elf, Dwarf)."
+    },
+    "class": {
+      "type": "string",
+      "description": "The character's class (e.g., Fighter, Wizard, Rogue)."
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "The character's level."
+    }
+  },
+  "required": ["name", "race", "class", "level"],
+  "additionalProperties": false
+}
