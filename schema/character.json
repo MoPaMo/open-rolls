@@ -19,8 +19,62 @@
       "type": "integer",
       "minimum": 1,
       "description": "The character's level."
+    },
+    "background": {
+      "type": "string",
+      "description": "background story / profession."
+    },
+    "attributes": {
+      "type": "object",
+      "properties": {
+        "strength": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Strength attribute score."
+        },
+        "dexterity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Dexterity attribute score."
+        },
+        "constitution": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Constitution attribute score."
+        },
+        "intelligence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Intelligence attribute score."
+        },
+        "wisdom": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Wisdom attribute score."
+        },
+        "charisma": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Charisma attribute score."
+        }
+      },
+      "required": [
+        "strength",
+        "dexterity",
+        "constitution",
+        "intelligence",
+        "wisdom",
+        "charisma"
+      ],
+      "description": "Core attributes"
     }
   },
-  "required": ["name", "race", "class", "level"],
+  "required": ["name", "race", "class", "level", "attributes"],
   "additionalProperties": false
 }
