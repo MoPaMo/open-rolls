@@ -5,6 +5,7 @@ import type { Character, Step } from "@/types/character";
 import { Button } from "@/components/ui/button";
 import { TraitStep } from "./Traits";
 import { ClassStep } from "./Class";
+import { BackgroundStep } from "./Background";
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
@@ -36,6 +37,7 @@ const INITIAL_CHARACTER: Character = {
 const steps: Step[] = [
   { title: "Traits", component: TraitStep },
   { title: "Class", component: ClassStep },
+  { title: "Background", component: BackgroundStep },
 ] as const;
 
 export default function CharacterWizard() {
