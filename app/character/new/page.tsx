@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Character } from "@/types/character";
+import type { Character, Step } from "@/types/character";
 import { Button } from "@/components/ui/button";
 
 const INITIAL_CHARACTER: Character = {
@@ -32,7 +32,7 @@ const INITIAL_CHARACTER: Character = {
   backstory: "",
 };
 
-const steps = [] as const;
+const steps: Step[] = [] as const;
 
 export default function CharacterWizard() {
   const [step, setStep] = useState(0);

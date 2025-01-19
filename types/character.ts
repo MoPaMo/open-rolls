@@ -34,3 +34,15 @@ export interface Character {
   };
   backstory: string;
 }
+
+export interface StepProps {
+  character: Character;
+  updateCharacter: (updates: Partial<Character>) => void;
+  onNext: () => void;
+  onBack: () => void;
+}
+
+export interface Step {
+  title: string;
+  component: React.ComponentType<StepProps>;
+}
