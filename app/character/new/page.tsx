@@ -7,6 +7,7 @@ import { TraitStep } from "./Traits";
 import { ClassStep } from "./Class";
 import { BackgroundStep } from "./Background";
 import { AttributesStep } from "./Attributes";
+import { AlignmentStep } from "./Alignment";
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
@@ -40,6 +41,7 @@ const steps: Step[] = [
   { title: "Class", component: ClassStep },
   { title: "Background", component: BackgroundStep },
   { title: "Attributes", component: AttributesStep },
+  { title: "Alignment", component: AlignmentStep },
 ] as const;
 
 export default function CharacterWizard() {
