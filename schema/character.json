@@ -166,7 +166,8 @@
           "maximum": 1,
           "description": "Good (1), Neutral (0), Evil (-1)"
         }
-      }
+      },
+      "required": ["moral", "properties"]
     },
     "backstory": {
       "type": "string",
