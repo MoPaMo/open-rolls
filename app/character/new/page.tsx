@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { TraitStep } from "./Traits";
 import { ClassStep } from "./Class";
 import { BackgroundStep } from "./Background";
+import { AttributesStep } from "./Attributes";
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
@@ -38,6 +39,7 @@ const steps: Step[] = [
   { title: "Traits", component: TraitStep },
   { title: "Class", component: ClassStep },
   { title: "Background", component: BackgroundStep },
+  { title: "Attributes", component: AttributesStep },
 ] as const;
 
 export default function CharacterWizard() {
