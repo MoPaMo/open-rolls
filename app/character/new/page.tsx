@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Character, Step } from "@/types/character";
 import { Button } from "@/components/ui/button";
 import { TraitStep } from "./Traits";
+import { ClassStep } from "./Class";
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
@@ -32,7 +33,10 @@ const INITIAL_CHARACTER: Character = {
   backstory: "",
 };
 
-const steps: Step[] = [{ title: "Traits", component: TraitStep }] as const;
+const steps: Step[] = [
+  { title: "Traits", component: TraitStep },
+  { title: "Class", component: ClassStep },
+] as const;
 
 export default function CharacterWizard() {
   const [step, setStep] = useState(0);
