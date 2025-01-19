@@ -73,6 +73,83 @@
         "charisma"
       ],
       "description": "Core attributes"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of skills the character is proficient in."
+    },
+    "proficiencies": {
+      "type": "object",
+      "properties": {
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Languages the character knows."
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Tools the character is proficient with."
+        }
+      },
+      "description": "Proficiencies including languages and tools."
+    },
+    "spells": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the spell."
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Spell level."
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Components required to cast the spell (e.g., V, S, M)."
+          },
+          "description": {
+            "description": "Description of what the spell does.",
+            "type": "string"
+          }
+        },
+        "required": ["name", "level"],
+        "description": "Details of each spell the character can cast."
+      },
+      "description": "List of spells the character can use."
+    },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the ability or feature."
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the ability."
+          }
+        },
+        "required": ["name", "description"],
+        "description": "Details of each ability or feature the character has."
+      },
+      "description": "List of abilities and special features."
     }
   },
   "required": ["name", "race", "class", "level", "attributes"],
