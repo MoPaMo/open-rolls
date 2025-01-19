@@ -150,6 +150,27 @@
         "description": "Details of each ability or feature the character has."
       },
       "description": "List of abilities and special features."
+    },
+    "alignment": {
+      "type": "object",
+      "properties": {
+        "ethic": {
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 1,
+          "description": "Lawful (1), Neutral (0), Chaotic (-1)"
+        },
+        "moral": {
+          "type": "integer",
+          "minimum": -1,
+          "maximum": 1,
+          "description": "Good (1), Neutral (0), Evil (-1)"
+        }
+      }
+    },
+    "backstory": {
+      "type": "string",
+      "description": "The character's backstory."
     }
   },
   "required": ["name", "race", "class", "level", "attributes"],
