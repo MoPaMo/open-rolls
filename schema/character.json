@@ -1,24 +1,24 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "DnDCharacter",
+  "title": "Character Sheet",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "The character's name."
+      "description": "character's name."
     },
     "race": {
       "type": "string",
-      "description": "The character's race (e.g., Human, Elf, Dwarf)."
+      "description": "character's race (e.g., Human, Elf, Dwarf)."
     },
     "class": {
       "type": "string",
-      "description": "The character's class (e.g., Fighter, Wizard, Rogue)."
+      "description": "character's class"
     },
     "level": {
       "type": "integer",
       "minimum": 1,
-      "description": "The character's level."
+      "description": "character's level."
     },
     "background": {
       "type": "string",
@@ -72,14 +72,14 @@
         "wisdom",
         "charisma"
       ],
-      "description": "Core attributes"
+      "description": "attributes"
     },
     "skills": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "description": "List of skills the character is proficient in."
+      "description": "skills the character is proficient in."
     },
     "proficiencies": {
       "type": "object",
@@ -89,17 +89,17 @@
           "items": {
             "type": "string"
           },
-          "description": "Languages the character knows."
+          "description": "languages the character knows."
         },
         "tools": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Tools the character is proficient with."
+          "description": "tools the character has proficiency in."
         }
       },
-      "description": "Proficiencies including languages and tools."
+      "description": "character's proficiencies"
     },
     "spells": {
       "type": "array",
@@ -130,7 +130,7 @@
         "required": ["name", "level"],
         "description": "Details of each spell the character can cast."
       },
-      "description": "List of spells the character can use."
+      "description": "spells the character can use."
     },
     "abilities": {
       "type": "array",
@@ -139,15 +139,15 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "Name of the ability or feature."
+            "description": "Name"
           },
           "description": {
             "type": "string",
-            "description": "Detailed description of the ability."
+            "description": "description"
           }
         },
         "required": ["name", "description"],
-        "description": "Details of each ability or feature the character has."
+        "description": "ability / feature character has."
       },
       "description": "List of abilities and special features."
     },
@@ -171,7 +171,7 @@
     },
     "backstory": {
       "type": "string",
-      "description": "The character's backstory."
+      "description": "backstory."
     }
   },
   "required": ["name", "race", "class", "level", "attributes"],
