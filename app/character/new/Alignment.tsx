@@ -45,7 +45,7 @@ export function AlignmentStep({
         <div className="mb-4">
           <Label className="text-lg font-semibold">Choose Your Alignment</Label>
           <p className="text-sm text-muted-foreground">
-           This will help you steer your character
+            This will help you steer your character
           </p>
         </div>
 
