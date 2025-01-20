@@ -55,7 +55,6 @@ export function AlignmentStep({
               <div key={ethic.value}>{ethic.label}</div>
             ))}
           </div>
-
           <div className="grid gap-2">
             {alignments.moral.map((moral) => (
               <div
