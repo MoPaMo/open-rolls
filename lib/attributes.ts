@@ -1,3 +1,13 @@
+import { BicepsFlexed, BookCopy, Brain, Heart, MessageCircleHeart,Activity } from "lucide-react"
+export const icons = {
+  "strength": BicepsFlexed,
+  "dexterity": Activity,
+  "constitution": Heart,
+  "intelligence": Brain,
+  "wisdom": BookCopy,
+  "charisma": MessageCircleHeart
+}
+
 export const ATTRIBUTES = [
   "strength",
   "dexterity",

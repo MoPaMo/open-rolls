@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -18,6 +19,7 @@ import {
   POINT_BUY_COSTS,
   rollAttribute,
   calculatePointBuyTotal,
+  icons,
   type AttributeKey,
 } from "@/lib/attributes";
 import { useAttributeDnd } from "@/hooks/attributes";
@@ -163,7 +165,7 @@ export function AttributesStep({
           Points Remaining: {27 - pointBuyTotal}
         </div>
       )}
-      <div className="space-y-4">
+      <div className="space-y-4 grid grid-cols-3 gap-4">
         {ATTRIBUTES.map((attribute) => (
           <div
             key={attribute}
@@ -172,7 +174,7 @@ export function AttributesStep({
             onDrop={(e) => handleDrop(e, attribute as AttributeKey)}
           >
             <Label htmlFor={attribute} className="capitalize">
-              {attribute}
+            {React.createElement(icons[attribute])} {attribute}
             </Label>
             {method === "pointBuy" ? (
               <div className="flex items-center gap-2">
