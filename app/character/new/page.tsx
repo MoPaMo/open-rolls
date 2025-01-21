@@ -78,21 +78,37 @@ export default function CharacterWizard() {
 
   if (isComplete) {
     return (
-      <div>
-        Doneee
-        <Button onClick={handleReset}>Create Another Character</Button>
+      <div className="max-w-3xl mx-auto p-6 space-y-6">
+        <div className="space-y-2">
+          <h1 className="text-2xl font-bold">Character Complete!</h1>
+          <p className="text-muted-foreground">Here's your character sheet:</p>
+        </div>
+        <pre className="p-4 bg-muted rounded-lg overflow-auto">
+          {JSON.stringify(character, null, 2)}
+        </pre>
+        <Button onClick={handleReset} className="w-full">
+          Create Another Character
+        </Button>
       </div>
     );
   }
-
   const CurrentStep = steps[step]?.component;
-
   if (!CurrentStep) {
-    return <div>Error: Step not found</div>;
+    return (
+      <>
+        <div>Step stolen by Orcs</div>
+        <div>This is an error</div>
+      </>
+    );
   }
-
   return (
-    <div>
+    <div className="max-w-3xl mx-auto p-6 space-y-6">
+      <div className="space-y-2">
+        <h1 className="text-2xl font-bold">Create Your Character</h1>
+        <p className="text-muted-foreground">
+          Step {step + 1} of {steps.length}: {steps[step].title}
+        </p>
+      </div>
       <CurrentStep
         character={character}
         updateCharacter={updateCharacter}
