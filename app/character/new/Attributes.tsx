@@ -116,21 +116,25 @@ export function AttributesStep({
           </SelectContent>
         </Select>
       </div>
-      {method === "roll" && (
+      {(method === "roll" || method === "standardArray") && (
         <div className="flex items-center gap-4">
-          <Button onClick={handleRoll} variant="outline">
-            <Dice6 className="w-4 h-4 mr-2" />
-            Roll All
-          </Button>
-          <Button onClick={reset} variant="outline" size="sm">
-            Reset Assignments
-          </Button>
+          {method === "roll" && (
+            <>
+              <Button onClick={handleRoll} variant="outline">
+                <Dice6 className="w-4 h-4 mr-2" />
+                Roll All
+              </Button>
+              <Button onClick={reset} variant="outline" size="sm">
+                Reset Assignments
+              </Button>
+            </>
+          )}
+          {method === "standardArray" && (
+            <Button onClick={reset} variant="outline" size="sm">
+              Reset Assignments
+            </Button>
+          )}
         </div>
-      )}
-      {method === "standardArray" && (
-        <Button onClick={reset} variant="outline" size="sm">
-          Reset Assignments
-        </Button>
       )}
       {(method === "standardArray" || method === "roll") && (
         <div className="grid grid-cols-2 gap-4 p-4 mb-4 border rounded-lg">
