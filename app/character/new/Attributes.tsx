@@ -174,7 +174,7 @@ export function AttributesStep({
             onDrop={(e) => handleDrop(e, attribute as AttributeKey)}
           >
             <Label htmlFor={attribute} className="capitalize">
-            {React.createElement(icons[attribute])} {attribute}
+              {React.createElement(icons[attribute])} {attribute}
             </Label>
             {method === "pointBuy" ? (
               <div className="flex items-center gap-2">

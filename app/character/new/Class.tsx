@@ -32,7 +32,7 @@ export function ClassStep({
             {CLASSES.map((className) => (
               <SelectItem key={className} value={className}>
                 {className}
-              </SelectItem> 
+              </SelectItem>
             ))}
           </SelectContent>
         </Select>

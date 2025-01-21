@@ -12,11 +12,7 @@ import type { StepProps } from "@/types/character";
 
 const RACES = ["Human", "Elf", "Dwarf", "Halfling", "Dragonborn", "Tiefling"];
 
-export function TraitStep({
-  character,
-  updateCharacter,
-  onNext,
-}: StepProps) {
+export function TraitStep({ character, updateCharacter, onNext }: StepProps) {
   return (
     <div className="space-y-4">
       <div className="space-y-2">
@@ -37,7 +33,7 @@ export function TraitStep({
         >
           <SelectTrigger>
             <SelectValue placeholder="Select a race" />
-          </SelectTrigger> 
+          </SelectTrigger>
           <SelectContent>
             {RACES.map((race) => (
               <SelectItem key={race} value={race}>
