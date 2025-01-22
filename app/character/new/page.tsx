@@ -9,6 +9,7 @@ import { BackgroundStep } from "./Background";
 import { AttributesStep } from "./Attributes";
 import { AlignmentStep } from "./Alignment";
 import { BackstoryStep } from "./Backstory";
+import { CharacterDisplay } from "./sheet/display";
 
 const INITIAL_CHARACTER: Character = {
   name: "",
@@ -78,20 +79,17 @@ export default function CharacterWizard() {
 
   if (isComplete) {
     return (
-      <div className="max-w-3xl mx-auto p-6 space-y-6">
-        <div className="space-y-2">
-          <h1 className="text-2xl font-bold">Character Complete!</h1>
-          <p className="text-muted-foreground">Here's your character sheet:</p>
+      <div className="space-y-6">
+        <CharacterDisplay character={character} />
+        <div className="container mx-auto px-6">
+          <Button onClick={handleReset} className="w-full">
+            Create Another Character
+          </Button>
         </div>
-        <pre className="p-4 bg-muted rounded-lg overflow-auto">
-          {JSON.stringify(character, null, 2)}
-        </pre>
-        <Button onClick={handleReset} className="w-full">
-          Create Another Character
-        </Button>
       </div>
     );
   }
+
   const CurrentStep = steps[step]?.component;
   if (!CurrentStep) {
     return (
