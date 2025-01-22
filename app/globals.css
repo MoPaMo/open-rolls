@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cormorant), Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -44,9 +44,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1,
@@ -73,6 +71,10 @@ body {
   }
   .ua {
     font-family: var(--font-ua), serif;
+  }
+
+  Label{
+    font-family: var(--font-cormorant), serif;
   }
 
   Select,

@@ -13,13 +13,10 @@ export default function Home() {
 
       <Card className="w-full max-w-md">
         <div className="p-6 space-y-4">
-          <h2 className="text-2xl font-semibold">Features</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Simple and intuitive character creation</li>
-            <li>Save and load characters</li>
-            <li>Export ch aracters to PDF</li>
-            <li>Open source and free to use</li>
-          </ul>
+          <h2 className="text-2xl font-semibold">Work In Progress!</h2>
+          <p>
+            Please do not build any characters you want to keep. This is a work in progress and data may be lost at any time.
+          </p>
         </div>
       </Card>
     </div>
