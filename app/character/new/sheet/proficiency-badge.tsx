@@ -1,9 +1,14 @@
-import { Badge } from "@/components/ui/badge"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 interface ProficiencyBadgeProps {
-  name: string
-  type: "language" | "tool" | "skill"
-        }
+  name: string;
+  type: "language" | "tool" | "skill";
+}
 export function ProficiencyBadge({ name, type }: ProficiencyBadgeProps) {
   return (
     <TooltipProvider>
@@ -16,5 +21,5 @@ export function ProficiencyBadge({ name, type }: ProficiencyBadgeProps) {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
+  );
 }

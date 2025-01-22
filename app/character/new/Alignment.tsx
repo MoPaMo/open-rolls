@@ -73,7 +73,7 @@ export function AlignmentStep({
                         key={key}
                         className={cn(
                           "group relative aspect-square rounded-lg border bg-card text-card-foreground transition-all hover:bg-accent",
-                          isSelected && "border-primary bg-primary/10"
+                          isSelected && "border-primary bg-primary/10",
                         )}
                         onClick={() =>
                           updateCharacter({

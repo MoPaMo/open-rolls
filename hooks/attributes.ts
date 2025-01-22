@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { AttributeKey } from "@/lib/attributes";
 export function useAttributeDnd(
   initialValues: number[],
-  onAssign: (attribute: AttributeKey, value: number) => void
+  onAssign: (attribute: AttributeKey, value: number) => void,
 ) {
   const [availableValues, setAvailableValues] =
     useState<number[]>(initialValues);

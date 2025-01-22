@@ -49,7 +49,7 @@ export function AttributesStep({
           [attribute]: value,
         },
       });
-    }
+    },
   );
   const handleRoll = () => {
     const newRolls = Array.from({ length: 6 }, rollAttribute);
@@ -58,7 +58,7 @@ export function AttributesStep({
     updateCharacter({
       attributes: ATTRIBUTES.reduce(
         (acc, attr) => ({ ...acc, [attr]: 0 }),
-        {} as Record<AttributeKey, number>
+        {} as Record<AttributeKey, number>,
       ),
     });
   };
@@ -67,7 +67,7 @@ export function AttributesStep({
     updateCharacter({
       attributes: ATTRIBUTES.reduce(
         (acc, attr) => ({ ...acc, [attr]: newMethod === "pointBuy" ? 8 : 0 }),
-        {} as Record<AttributeKey, number>
+        {} as Record<AttributeKey, number>,
       ),
     });
     if (newMethod === "standardArray") {
@@ -99,7 +99,7 @@ export function AttributesStep({
     });
   };
   const isValid = ATTRIBUTES.every(
-    (attr) => character.attributes[attr as AttributeKey] > 0
+    (attr) => character.attributes[attr as AttributeKey] > 0,
   );
   const pointBuyTotal = calculatePointBuyTotal(character.attributes);
   return (

@@ -1,12 +1,23 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wand2 } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Wand2 } from "lucide-react";
 interface SpellCardProps {
-  name: string
-  level: number
-  components: string[]
-  description: string
+  name: string;
+  level: number;
+  components: string[];
+  description: string;
 }
-export function SpellCard({ name, level, components, description }: SpellCardProps) {
+export function SpellCard({
+  name,
+  level,
+  components,
+  description,
+}: SpellCardProps) {
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -23,5 +34,5 @@ export function SpellCard({ name, level, components, description }: SpellCardPro
         <p className="text-sm">{description}</p>
       </CardContent>
     </Card>
-  )
+  );
 }

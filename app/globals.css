@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -45,7 +44,9 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 
   h1,
@@ -70,15 +71,19 @@ body {
   .almendra-sc {
     font-family: var(--font-almendra-sc), serif;
   }
-  .ua{
+  .ua {
     font-family: var(--font-ua), serif;
   }
 
-  Select, Input, SelectTrigger, SelectValue, Textarea {
+  Select,
+  Input,
+  SelectTrigger,
+  SelectValue,
+  Textarea {
     font-family: var(--font-quintessential), serif;
   }
 
-  Button{
+  Button {
     font-family: var(--font-ua), serif;
   }
 
