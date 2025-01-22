@@ -10,7 +10,6 @@ import { AttributesStep } from "./Attributes";
 import { AlignmentStep } from "./Alignment";
 import { BackstoryStep } from "./Backstory";
 import { CharacterDisplay } from "./sheet/display";
-
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
