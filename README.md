@@ -1,3 +1,3 @@
 # openRolls
 
-this porjects aims to create a FOSS DnD character builder, as well as an open standard for DnD character sheets as structured data (see the schema here)
+this porjects aims to create a FOSS DnD character builder, as well as an open standard for DnD character sheets as structured data ([see the schema here](https://github.com/MoPaMo/open-rolls/blob/main/schema/character.json))
