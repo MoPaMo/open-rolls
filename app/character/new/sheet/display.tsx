@@ -1,5 +1,5 @@
 import { Book, Crown, Flag, GraduationCap, Heart, PersonStanding, Scroll, Shield, Swords, User } from "lucide-react"
-import { AbilityScore } from "./ability-score.tsx"
+import { AbilityScore } from "./ability-score"
 import { InfoItem } from "./info-item"
 import { ProficiencyBadge } from "./proficiency-badge"
 import { SpellCard } from "./spell-card"
