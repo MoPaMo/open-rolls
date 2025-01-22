@@ -3,15 +3,15 @@
 import { useState } from "react";
 import type { Character, Step } from "@/types/character";
 import { Button } from "@/components/ui/button";
-import { TraitStep } from "./Traits";
-import { ClassStep } from "./Class";
-import { BackgroundStep } from "./Background";
-import { AttributesStep } from "./Attributes";
-import { AlignmentStep } from "./Alignment";
-import { BackstoryStep } from "./Backstory";
+import { TraitStep } from "./Steps/Traits";
+import { ClassStep } from "./Steps/Class";
+import { BackgroundStep } from "./Steps/Background";
+import { AttributesStep } from "./Steps/Attributes";
+import { AlignmentStep } from "./Steps/Alignment";
+import { BackstoryStep } from "./Steps/Backstory";
 import { CharacterDisplay } from "./sheet/display";
-import { SkillsStep } from "./Skills";
-import { ProficienciesStep } from "./Proficiencies";
+import { SkillsStep } from "./Steps/Skills";
+import { ProficienciesStep } from "./Steps/Proficiencies";
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
