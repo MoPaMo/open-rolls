@@ -41,7 +41,7 @@ export const POINT_BUY_COSTS: Record<number, number> = {
 export function rollAttribute(): number {
   const rolls = Array.from(
     { length: 4 },
-    () => Math.floor(Math.random() * 6) + 1,
+    () => Math.floor(Math.random() * 6) + 1
   );
   return rolls
     .sort((a, b) => b - a)
@@ -49,7 +49,7 @@ export function rollAttribute(): number {
     .reduce((sum, num) => sum + num, 0);
 }
 export function calculatePointBuyTotal(
-  attributes: Record<AttributeKey, number>,
+  attributes: Record<AttributeKey, number>
 ): number {
   return Object.values(attributes).reduce((total, value) => {
     return total + (POINT_BUY_COSTS[value] || 0);
