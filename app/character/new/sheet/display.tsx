@@ -26,11 +26,11 @@ interface CharacterDisplayProps {
 export function CharacterDisplay({ character }: CharacterDisplayProps) {
   const alignmentString = `${ALIGNMENT_MAP.ethic[character.alignment.ethic]} ${ALIGNMENT_MAP.moral[character.alignment.moral]}`
   return (
-    <div className="container mx-auto p-6 space-y-6">
+    <div className="container mx-auto p-6 space-y-6 ua">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-4xl font-bold">{character.name}</h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground almendra-sc">
             Level {character.level} {character.race} {character.class}
           </p>
         </div>
@@ -97,7 +97,7 @@ export function CharacterDisplay({ character }: CharacterDisplayProps) {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ScrollArea className="h-[200px] w-full rounded-md border p-4">
+              <ScrollArea className="h-[200px] w-full rounded-md border p-4 quintessential">
                 <p className="text-sm whitespace-pre-wrap">{character.backstory}</p>
               </ScrollArea>
             </CardContent>
