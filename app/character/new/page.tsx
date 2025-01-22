@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Character, Step } from "@/types/character";
 import { Button } from "@/components/ui/button";
 import { TraitStep } from "./Steps/Traits";
@@ -55,8 +55,18 @@ const steps: Step[] = [
 
 export default function CharacterWizard() {
   const [step, setStep] = useState(0);
-  const [character, setCharacter] = useState<Character>(INITIAL_CHARACTER);
+  const [character, setCharacter] = useState<Character>(() => {
+    if (typeof window !== "undefined") {
+      const storedCharacter = localStorage.getItem("character");
+      return storedCharacter ? JSON.parse(storedCharacter) : INITIAL_CHARACTER;
+    }
+    return INITIAL_CHARACTER;
+  });
   const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("character", JSON.stringify(character));
+  }, [character]);
 
   const updateCharacter = (updates: Partial<Character>) => {
     setCharacter((prev) => ({ ...prev, ...updates }));
