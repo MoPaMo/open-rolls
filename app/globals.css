@@ -57,6 +57,14 @@ body {
     @apply font-bold tracking-tight;
   }
 
+  h1 {
+    font-family: var(--font-almendra-sc), serif;
+  }
+
+  h2 {
+    font-family: var(--font-quintessential), cursive;
+  }
+  
   ::-webkit-scrollbar {
     @apply w-2;
   }
