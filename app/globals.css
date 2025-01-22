@@ -70,10 +70,14 @@ body {
   .almendra-sc {
     font-family: var(--font-almendra-sc), serif;
   }
+  .ua{
+    font-family: var(--font-ua), serif;
+  }
 
-  Select, Input {
+  Select, Input, SelectTrigger, SelectValue, Textarea {
     font-family: var(--font-quintessential), serif;
   }
+
   Button{
     font-family: var(--font-ua), serif;
   }
