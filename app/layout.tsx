@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Quintessential, Almendra_SC } from "next/font/google";
+import { Quintessential, Almendra_SC, Uncial_Antiqua } from "next/font/google";
 
 const quintessential = Quintessential({
   subsets: ["latin"],
@@ -11,6 +11,11 @@ const quintessential = Quintessential({
 
 const almendraSC = Almendra_SC({
   variable: "--font-almendra-sc",
+  subsets: ["latin"],
+  weight: "400",
+});
+const uncialAntiqua = Uncial_Antiqua({
+  variable: "--font-ua",
   subsets: ["latin"],
   weight: "400",
 });
@@ -38,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${quintessential.variable} ${almendraSC.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${quintessential.variable} ${almendraSC.variable} ${uncialAntiqua.variable} antialiased`}
       >
         <div className="p-2">{children}</div>
       </body>

@@ -64,7 +64,20 @@ body {
   h2 {
     font-family: var(--font-quintessential), cursive;
   }
-  
+  .quintessential {
+    font-family: var(--font-quintessential), cursive;
+  }
+  .almendra-sc {
+    font-family: var(--font-almendra-sc), serif;
+  }
+
+  Select, Input {
+    font-family: var(--font-quintessential), serif;
+  }
+  Button{
+    font-family: var(--font-ua), serif;
+  }
+
   ::-webkit-scrollbar {
     @apply w-2;
   }
