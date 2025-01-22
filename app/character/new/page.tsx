@@ -12,6 +12,7 @@ import { BackstoryStep } from "./Steps/Backstory";
 import { CharacterDisplay } from "./sheet/display";
 import { SkillsStep } from "./Steps/Skills";
 import { ProficienciesStep } from "./Steps/Proficiencies";
+import { SpellsStep } from "./Steps/Spells";
 const INITIAL_CHARACTER: Character = {
   name: "",
   race: "",
@@ -48,7 +49,7 @@ const steps: Step[] = [
   { title: "Skills", component: SkillsStep },
   { title: "Proficiencies", component: ProficienciesStep },
   { title: "Alignment", component: AlignmentStep },
-
+  { title: "Spells", component: SpellsStep },
   { title: "Backstory", component: BackstoryStep },
 ] as const;
 
