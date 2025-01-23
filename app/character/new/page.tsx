@@ -13,7 +13,7 @@ import { CharacterDisplay } from "./sheet/display";
 import { SkillsStep } from "./Steps/Skills";
 import { ProficienciesStep } from "./Steps/Proficiencies";
 import { SpellsStep } from "./Steps/Spells";
-import { AbilityStep } from "./Steps/Ability";
+import { AbilitiesStep } from "./Steps/Ability";
 
 const INITIAL_CHARACTER: Character = {
   name: "",
@@ -52,7 +52,7 @@ const steps: Step[] = [
   { title: "Proficiencies", component: ProficienciesStep },
   { title: "Skills", component: SkillsStep },
   { title: "Spells", component: SpellsStep },
-  { title: "Abilities", component: AbilityStep },
+  { title: "Abilities", component: AbilitiesStep },
   { title: "Backstory", component: BackstoryStep },
 ] as const;
 
